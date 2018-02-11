@@ -1,0 +1,26 @@
+div#wrapper {
+  grid-template-rows: 5rem auto 3rem;
+  grid-template-columns: 10rem auto 12rem;
+  grid-template-areas:
+    "header header social"
+    "links main main"
+    "footer footer footer";
+}
+
+/*  ------------- HAMBURGER -------------  */
+.hamburger {
+  display: none;
+}
+
+/*  ------------- NAV -------------  */
+nav {
+  height: auto;
+  ul li {
+    border-bottom: 1px solid $primaryColor;
+  }
+  ul li a {
+    border-radius: 0;
+    background-color: transparent;
+    margin: 0;
+  }
+} // end nav

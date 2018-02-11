@@ -1,0 +1,135 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*  apply a natural box layout model to all elements  */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* ------------- BODY ------------- */
+body {
+  font-family: $defaultFont;
+  font-size: 16px;
+  font-weight: $normalWeight;
+}
+
+div#wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3rem auto auto 3rem auto;
+  grid-template-areas:
+    "hamburger social"
+    "header header"
+    "main main"
+    "footer footer"
+    "links links";
+
+  background-color: $primaryColor;
+}
+
+/*  ------------- HAMBURGER -------------  */
+.hamburger {
+  grid-area: hamburger;
+  align-self: center;
+  padding-left: $gutter;
+  font-size: 2rem;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/*  ------------- SOCIAL -------------  */
+div.social {
+  grid-area: social;
+  justify-self: end;
+  align-self: center;
+  padding-right: $gutter;
+  a {
+    font-size: 1.8rem;
+    padding-left: 0.5rem;
+    color: white;
+  }
+  a:hover {
+    color: $secondaryColor;
+  }
+}
+
+/*  ------------- HEADER -------------  */
+header {
+  grid-area: header;
+  color: $secondaryColor;
+  padding: 1rem $gutter;
+  h1 {
+    font-size: 2rem;
+    font-weight: $normalWeight;
+  } //end h1 rules
+
+  h2 {
+    font-size: 1.12rem;
+    font-weight: $normalWeight;
+  } // end header
+} //end h2 rules
+
+/*  ------------- NAV -------------  */
+nav {
+  grid-area: links;
+  background-color: $secondaryColor;
+  height: 100vh;
+  ul li a {
+    display: block;
+    text-align: center;
+    margin: 0.5rem $gutter;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    color: $primaryColor;
+    text-decoration: none;
+  }
+  ul li a:hover {
+    color: white;
+  }
+} // end nav
+
+/*  ------------- MAIN -------------  */
+main {
+  grid-area: main;
+  min-height: 300px;
+  background-color: white;
+  p {
+    margin: 1rem $gutter;
+  }
+  h1 {
+    font-size: 2rem;
+    margin: 1.5rem $gutter 0.5rem $gutter;
+    color: $primaryColor;
+  } // end h1
+} // end main
+
+/*  ------------- FOOTER -------------  */
+footer {
+  grid-area: footer;
+  justify-content: center;
+  p {
+    text-align: center;
+    color: $secondaryColor;
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+  } // end p
+
+  p a {
+    color: $secondaryColor;
+  }
+} // end footer
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,29 @@
+/*  ------------- NAV -------------  */
+nav {
+  ul {
+    margin-left: 2%;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  ul li {
+    flex-basis: auto;
+  } // end li
+  ul li:last-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  ul li a {
+    padding: 0.5rem 1rem;
+  } // and a
+} // end nav
+
+/*  ------------- MAIN -------------  */
+main {
+  div.container1 div {
+    -ms-flex-basis: 29.333%;
+    flex-basis: 33.333%;
+  }
+
+  div.container2 figure {
+    -ms-flex-basis: 21%;
+    flex-basis: 25%;
+  }
+} // end main

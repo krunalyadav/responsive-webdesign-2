@@ -1,0 +1,26 @@
+/*-----HEADER SOCIAL ICONS-----*/
+header {
+  position: relative;
+
+  ul.social {
+    position: absolute;
+    bottom: 0.5rem;
+    right: $gutter;
+  }
+
+  ul.social li {
+    width: auto;
+  }
+} // end header
+
+/*  ------------- MAIN -------------  */
+main {
+  /*---------------- COLUMN LAYOUT -------------*/
+  @for $i from 1 through 12 {
+    $w: ($i / 12) * 100%;
+    .medium-#{$i} {
+      width: $w;
+      float: left;
+    }
+  }
+} // end main

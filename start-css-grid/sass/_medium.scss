@@ -1,0 +1,31 @@
+/*-----HEADER SOCIAL ICONS-----*/
+header {
+} // end header
+
+/*  ------------- MAIN -------------  */
+main {
+  div.parent {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  div.parent article:nth-child(1) {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+  }
+
+  div.lead {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+  }
+
+  div.secondTop {
+    grid-row: 1;
+    grid-column: 2;
+    align-self: start;
+  }
+
+  div.secondBot {
+    grid-row: 2;
+    grid-column: 2;
+    align-self: end;
+  }
+} // end main
